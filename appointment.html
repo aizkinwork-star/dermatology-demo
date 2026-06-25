@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Appointment | Dr. Aanya Sharma Skin & Hair Clinic, Ranchi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Dr. Aanya Sharma</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="appointment.html" class="btn btn-primary nav-cta">Book Appointment</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Appointment</span>
+    <h1>Request an Appointment</h1>
+    <p class="hero-sub">Fill in your details and preferred date — the clinic will confirm by phone or email.</p>
+  </div>
+</section>
+
+<section class="appointment-section">
+  <div class="container appointment-wrap">
+    <form action="https://formspree.io/f/mrewezvl" method="POST" class="contact-form appointment-form">
+      <label>Full Name
+        <input type="text" name="name" required>
+      </label>
+      <label>Phone Number
+        <input type="tel" name="phone" required>
+      </label>
+      <label>Preferred Date
+        <input type="date" name="preferred_date" required>
+      </label>
+      <label>Message (optional — describe your concern)
+        <textarea name="message" rows="4"></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary">Request Appointment</button>
+    </form>
+
+    <div class="appointment-alt">
+      <h3>Prefer to pick your own time slot?</h3>
+      <p>Use online booking to choose an exact date and time — you'll get an instant confirmation email.</p>
+      <a href="booking.html" class="btn btn-outline">Book Online Instead</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; 2026 Dr. Aanya Sharma Skin &amp; Hair Clinic. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
