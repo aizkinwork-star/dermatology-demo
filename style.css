@@ -75,6 +75,8 @@ a { text-decoration: none; color: inherit; }
 
 .nav-cta { white-space: nowrap; }
 
+.nav-mobile-book { display: none; }
+
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -531,7 +533,7 @@ section h2 {
     position: fixed;
     inset: 0;
     background: rgba(15, 30, 50, 0.35);
-    z-index: 140;
+    z-index: 90;
   }
 
   .nav-backdrop.open { display: block; }
