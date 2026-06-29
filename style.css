@@ -484,23 +484,61 @@ section h2 {
 
 /* Responsive */
 @media (max-width: 900px) {
-  .nav-toggle { display: flex; }
+  .nav-cta { display: none; }
+  .nav-toggle { display: flex; flex-shrink: 0; z-index: 200; }
+  .header-inner { position: relative; }
+
   .nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
+    display: flex;
     flex-direction: column;
-    padding: 16px 24px;
-    gap: 14px;
+    gap: 2px;
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 240px;
+    height: 100vh;
+    background: var(--white);
+    border-left: 1px solid var(--border);
+    padding: 80px 20px 24px;
+    transition: right 0.25s ease;
+    z-index: 150;
+    box-shadow: -6px 0 20px rgba(0,0,0,0.08);
+    overflow-y: auto;
   }
-  .nav.open { display: flex; }
-  .header-inner { position: relative; flex-wrap: wrap; }
+
+  .nav.open { right: 0; }
+
+  .nav a {
+    padding: 11px 6px;
+    font-size: 0.92rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-mobile-book {
+    display: block;
+    margin-top: 14px;
+    background: var(--blue-deep);
+    color: var(--white) !important;
+    text-align: center;
+    border-radius: 8px;
+    padding: 11px;
+    font-weight: 600;
+    border-bottom: none !important;
+  }
+
+  .nav-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 30, 50, 0.35);
+    z-index: 140;
+  }
+
+  .nav-backdrop.open { display: block; }
+
   .hero-inner { flex-direction: column; }
-  .hero h1 { font-size: 1.9rem; }
+  .hero h1 { font-size: 1.7rem; }
+  .hero-sub { font-size: 0.95rem; }
   .service-grid { grid-template-columns: repeat(2, 1fr); }
   .location-inner { flex-direction: column; }
   .about-grid-inner { grid-template-columns: 1fr; }
@@ -510,8 +548,32 @@ section h2 {
   .testimonial-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .blog-grid { grid-template-columns: 1fr; }
+
+  section { padding: 44px 0; }
+  section h2 { font-size: 1.35rem; }
+  .page-hero { padding: 40px 0 28px; }
+  .page-hero h1 { font-size: 1.6rem; }
+
+  .appointment-form, .appointment-alt, .contact-form-wrap {
+    padding: 18px;
+  }
+
+  .service-card, .about-card, .blog-card {
+    padding: 18px 16px;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  .contact-form input, .contact-form textarea {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
   .service-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 1.5rem; }
+  .logo { font-size: 0.98rem; }
 }
